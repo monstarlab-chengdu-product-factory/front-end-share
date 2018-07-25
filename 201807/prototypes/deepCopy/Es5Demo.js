@@ -35,10 +35,10 @@ console.log(dArrary)
 
 
 // jqery的extend
-// var a = [[1, 2, 3], 4, [5, 6]]
-// b = $.extend([], a)
-// console.log("a: ",a)
-// console.log("b: ",b)
+var a = [[1, 2, 3], 4, [5, 6]]
+b = $.extend([], a)
+console.log("a: ",a)
+console.log("b: ",b)
 // 此次不表
 
 
@@ -47,6 +47,7 @@ let eArrary = [...dArrary]
 eArrary[1]='10'
 console.log(eArrary)
 
+// map
 // 二、对象 ES5 的深拷贝写法
 
 // 1，转成 JSON 再转回来
@@ -123,12 +124,16 @@ console.log('这里是用jq的extend方法copy后的对象');
 console.log(obj2)
 
 // 6，lodash  另外一个很热门的函数库lodash，也有提供_.cloneDeep用来做 Deep Copy。
-// let _ = require('lodash')
-// var obj1 = {
-//     a: 1,
-//     b: { f: { g: 1 } },
-//     c: [1, 2, 3]
-// };
-// var obj2 = cloneDeep(obj1);
-// console.log(obj1.b.f === obj2.b.f);
+let _ = require('lodash')
+var obj1 = {
+    a: 1,
+    b: { f: { g: 1 } },
+    c: [1, 2, 3]
+};
+var obj2 = _.cloneDeep(obj1);
+console.log(obj1.b.f === obj2.b.f);
 // // false
+
+// class 的情况
+// immutatable
+// lodash和jq的内部实现不一样
