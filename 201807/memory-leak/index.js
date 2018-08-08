@@ -8,7 +8,10 @@ function foo(arg) {
   window.bar = "this is an explicit global variable"
 }
 
-// Another way in which an accidental global variable can be created
+window.bar = null
+
+// Another way in which an accidental
+// global variable can be created
 function foo() {
   this.variable = "potential accidental global"
 }
@@ -30,6 +33,7 @@ setInterval(function () {
   }
 }, 1000)
 
+
 // Solution
 var init = self.setInterval(function () {
 // Do stuff
@@ -45,6 +49,7 @@ function onClick(event) {
 }
 
 element.addEventListener('click', onClick)
+
 // Do stuff
 element.removeEventListener('click', onClick)
 element.parentNode.removeChild(element)
@@ -58,12 +63,14 @@ var elements = {
   image: document.getElementById('image'),
   text: document.getElementById('text')
 };
+
 function doStuff() {
   image.src = 'http://some.url/image'
   button.click()
   console.log(text.innerHTML)
   // Much more logic
 }
+
 function removeButton() {
   // The button is a direct child of body.
   document.body.removeChild(document.getElementById('button'))
@@ -73,7 +80,8 @@ function removeButton() {
 }
 
 // Case:4
-//Anonymous functions that capture variables from parent scopes
+
+//Anonymous functions that capture variables from parent scopes,
 var theThing = null
 var replaceThing = function () {
   var originalThing = theThing
