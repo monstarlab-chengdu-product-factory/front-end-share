@@ -15,7 +15,16 @@
 ### 7.25
 1 秋霞 原型继承与deep copy 的3种实现（ES5/ES6/immutable.js）  
 
-2  仁义 jest自动化测试 case 
+2 仁义 jest自动化测试 case 
 
 3 竹梅 内存回收机制和内存泄漏 
 
+
+### 8.08
+1 秋霞 原型链 
+
+2 仁义 jest自动化测试 case 2
+
+3 竹梅 chrome内存泄漏debug  react国际化方案
+
+4 粱怡 移动端响应式适配计算
