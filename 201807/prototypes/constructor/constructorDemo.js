@@ -27,7 +27,7 @@ function PersonFactory (name, age, job) {
     this.age = age
     this.job = job
     this.sayName = function () {
-        console.log('this is my name:' + this.name)
+        console.log('this is my name')
     }
 }
 let person1 = new PersonFactory('李宇春', 18 , 'singer')
@@ -45,35 +45,58 @@ console.log(person1.constructor === PersonFactory)
 console.log(person2.constructor === PersonFactory)
 console.log(arr.constructor === Array)
 console.log(arr instanceof Array)
+
+
+// 构造函数的问题
+// 不同实例上的同名函数是不相同的,因为用这种方式创建函数，是创建的不同的作用域和标识符解析
+console.log(person1.sayName == person2.sayName)
+
+// 构造函数
+function sayName () {
+    console.log('this is my name' + this.name)
+}
+function Person (name, age, job) {
+    this.name = name
+    this.age = age
+    this.job = job
+    this.sayName = sayName;
+}
+let person3 = new Person('李宇春', 18 , 'singer')
+let person4 = new Person('chris', 18 , 'front-end')
+person3.sayName()
+person4.sayName()
+
+
 // call 和apply 他们都是function自带的方法，作用是：调用一个对象的一个方法，用另一个对象替换当前对象。用前面那个方法去调用参数里面那个方法
 
-function add (a,b) {
-    return a + b
-}
-function sub (a,b, c) {
-    return a-b-c
-}
-let a1 = add.apply(sub, [3,2,1])
-let a2 = sub.apply(add, [3,2,1])
-let a3 = add.call(sub, 3,2)
-let a4 = sub.call(add, 3,2,1)
-console.log(a1)
-console.log(a2)
-console.log(a3)
-console.log(a4)
+
+// function add (a,b) {
+//     return a + b
+// }
+// function sub (a,b, c) {
+//     return a-b-c
+// }
+// let a1 = add.apply(sub, [3,2,1])
+// let a2 = sub.apply(add, [3,2,1])
+// let a3 = add.call(sub, 3,2)
+// let a4 = sub.call(add, 3,2,1)
+// console.log(a1)
+// console.log(a2)
+// console.log(a3)
+// console.log(a4)
 
 // 以上内容展示了apply和call的写法的不同
 // TODO: 但是这样调用和直接调用函数的结果是一样的，那我为什么要这么写？
 // 实现继承
-function Family (father, mother) {
-    this.father = father
-    this.mother = mother
-    this.hello = function () {
-        console.log('this is my father' + this.father)
-    }
-}
-function callThem (name) {
-    Family.apply(this, [name])
-}
-let family = new callThem(['A'])
-family.hello()
+// function Family (father, mother) {
+//     this.father = father
+//     this.mother = mother
+//     this.hello = function () {
+//         console.log('this is my father' + this.father)
+//     }
+// }
+// function callThem (name) {
+//     Family.apply(this, [name])
+// }
+// let family = new callThem(['A'])
+// family.hello()
