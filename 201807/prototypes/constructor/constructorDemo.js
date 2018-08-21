@@ -49,7 +49,7 @@ console.log(arr instanceof Array)
 
 // 构造函数的问题
 // 不同实例上的同名函数是不相同的,因为用这种方式创建函数，是创建的不同的作用域和标识符解析
-console.log(person1.sayName == person2.sayName)
+console.log(person1.sayName == person2.sayName) // false
 
 // 构造函数
 function sayName () {
