@@ -1,3 +1,5 @@
+// 创建对象
+
 // 工厂函数
 function personFactory (name, age, job) {
     let newObject = new Object()
@@ -65,10 +67,38 @@ let person3 = new Person('李宇春', 18 , 'singer')
 let person4 = new Person('chris', 18 , 'front-end')
 person3.sayName()
 person4.sayName()
+// 上面是有问题的，由于一个函数的应用而定义了一个全局的方法供他调用，感觉不是很合理，如果有N个呢？岂不是要写N个全局函数
+// 并且每次使用构造函数去实例化对象的时候，都会为实力的对象新开辟一个空间，如果数量较大的话，会浪费很大空间，并且生成的这些function的机制是一样的
+//就感觉不是很有必要
 
 
+//这时候就用原型来解决这个问题
+// 原型模式
+function Student () {
+}
+Student.prototype.name = '啥子'
+Student.prototype.age = '18'
+Student.prototype.job = 'singer'
+Student.prototype.sayName = function () {
+    console.log(this.name + '是我的名字')
+}
+let student1 = new Student()
+let student2 = new Student()
+console.log(student1.sayName === student2.sayName) // 这里说明他们就是共享的一个函数
+// student1.prototype.sayName = function () {
+//     console.log('我修改了原型里面的方法')
+// }
+student1.name = 'chenqiuxia'
+student1.sayName()
+student2.sayName()
+
+console.log(Student.prototype.isPrototypeOf(student1))
+console.log(Student.prototype.isPrototypeOf(student1))
 // call 和apply 他们都是function自带的方法，作用是：调用一个对象的一个方法，用另一个对象替换当前对象。用前面那个方法去调用参数里面那个方法
 
+// apply 的巧妙用法
+console.log(Math.max.apply(null, [2,4,6,1,1000]))
+console.log(Math.min.apply(null, [2,4,6,1,1000]))
 
 // function add (a,b) {
 //     return a + b
