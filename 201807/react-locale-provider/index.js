@@ -1,1 +1,0 @@
-// https://github.com/zhumeisongsong/react-resume
