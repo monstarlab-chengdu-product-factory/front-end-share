@@ -1,6 +1,16 @@
 // 创建对象
 
 // 工厂函数
+const personFactory = (name, age, job) => {
+    let newObject = new Object()
+    newObject.name = name
+    newObject.age = age
+    newObject.job = job
+    newObject.sayName = function () {
+        console.log(' my name is ' + this.name)
+    }
+    return newObject
+}
 function personFactory (name, age, job) {
     let newObject = new Object()
     newObject.name = name
@@ -20,17 +30,18 @@ console.log(personFactory2.name)
 console.log(personFactory2.age)
 console.log(personFactory2.sayName())
 let arr = []
-// console.log(arr instanceof Array)
+console.log(arr instanceof Array)
 console.log(personFactory1 instanceof Object) // 在示例中，得到的都是newObject这个对象，对象的类型都是Object
 
 // 构造函数
+function sayName () {
+    console.log('this is my name')
+}
 function PersonFactory (name, age, job) {
     this.name = name
     this.age = age
     this.job = job
-    this.sayName = function () {
-        console.log('this is my name')
-    }
+    this.sayName = sayName
 }
 let person1 = new PersonFactory('李宇春', 18 , 'singer')
 let person2 = new PersonFactory('chris', 18 , 'front-end')
