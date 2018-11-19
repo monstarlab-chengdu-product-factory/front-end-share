@@ -14,7 +14,7 @@ module.exports = () => {
     let branch
 
     if(!config.tpl[tplName]){
-      console.log(chalk.red('\n x Template does not exit!'))
+      console.log(chalk.red(`\n ${tplName} Template does not exit!`))
       process.exit()
     } else {
       gitUrl = config.tpl[tplName].url
