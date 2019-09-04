@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "painter": "/pages/painter/painter"
+  },
+  "navigationBarTitleText": "首页"
+}

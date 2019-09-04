@@ -1,0 +1,12 @@
+
+.canvas {
+  position: fixed;
+  top: -10000rpx;
+}
+
+.img {
+  width: 600rpx;
+  height: 832rpx;
+  display: block;
+  margin: 0 auto;
+}
