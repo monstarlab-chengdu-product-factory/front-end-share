@@ -1,0 +1,9 @@
+<block>
+    <view class="page">
+        <button>生成canvas</button>
+        <view class="canvas">
+            <painter palette="{{test}}" __triggerObserer="{{ _triggerObserer }}" bindimgOK="onImgOK" bindimgErr="onImgErr" __fn_onImgOK="{{true}}" __fn_onImgErr="{{true}}"></painter>
+        </view>
+        <image src="{{src}}" class="img"></image>
+    </view>
+</block>
