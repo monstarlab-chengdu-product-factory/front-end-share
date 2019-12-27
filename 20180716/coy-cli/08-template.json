@@ -1,0 +1,120 @@
+{
+  "proTypeArr": [
+    {
+      "name": "后端管理系统",
+      "value": "0"
+    },
+    {
+      "name": "单页面静态",
+      "value": "1"
+    },
+    {
+      "name": "移动端多页面项目",
+      "value": "2"
+    },
+    {
+      "name": "APP",
+      "value": "3"
+    },
+    {
+      "name": "嵌入式h5页面",
+      "value": "4"
+    },
+    {
+      "name": "个性化C端网站",
+      "value": "5"
+    },
+    {
+      "name": "小程序",
+      "value": "6"
+    }
+  ],
+  "proTemplate": [
+    [
+      {
+        "name": "公司共通模板",
+        "value": "url"
+      },
+      {
+        "name": "dva 默认模板",
+        "value": "url"
+      }
+    ],
+    [
+      {
+        "name": "React/next",
+        "value": "url"
+      },
+      {
+        "name": "Html",
+        "value": "url"
+      },
+      {
+        "name": "Pug",
+        "value": "url"
+      },
+      {
+        "name": "React",
+        "value": "url"
+      }
+    ],
+    [
+      {
+        "name": "React",
+        "value": "React"
+      },
+      {
+        "name": "React/next",
+        "value": "React/next"
+      },
+      {
+        "name": "Pug",
+        "value": "Pug"
+      },
+      {
+        "name": "Preact",
+        "value": "Preact"
+      }
+    ],
+    [
+      {
+        "name": "RN",
+        "value": "RN"
+      },
+      {
+        "name": "React",
+        "value": "React"
+      }
+    ],
+    [
+      {
+        "name": "React",
+        "value": "React"
+      },
+      {
+        "name": "Pug",
+        "value": "Pug"
+      },
+      {
+        "name": "Html",
+        "value": "Html"
+      }
+    ],
+    [
+      {
+        "name": "React/next",
+        "value": "React/next"
+      },
+      {
+        "name": "React",
+        "value": "React"
+      }
+    ],
+    [
+      {
+        "name": "Monstar小程序共通模板",
+        "value": "https://github.com/monstarlab-chengdu-product-factory/monstar-ui.git#master"
+      }
+    ]
+  ]
+}
