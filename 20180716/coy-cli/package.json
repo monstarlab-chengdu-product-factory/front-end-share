@@ -1,6 +1,6 @@
 {
   "name": "@renyi-npm/template-cli",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "自动生成模板项目的工具",
   "main": "index.js",
   "scripts": {
