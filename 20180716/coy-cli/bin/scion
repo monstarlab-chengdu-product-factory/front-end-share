@@ -10,14 +10,11 @@ program.version(require('../package.json').version)
 
 //定义使用方法
 program.usage('<command>')
-
-program.command('add').description('Add a new template').alias('a').action(() => { require('../command/add')()})
-
-program.command('list').description('List all the template').alias('l').action(() => { require('../command/list')()})
-
 program.command('init').description('Generage a new project').alias('i').action(() => { require('../command/init')()})
 
-program.command('delete').description('Delete a template').alias('d').action(() => { require('../command/delete')()})
+program.command('initT').description('Generage a new template text').alias('iT').action(() => { require('../command/initText')()})
+
+program.command('pull').description('pull template JSON file').alias('p').action(() => { require('../command/pull')()})
 
 program.parse(process.argv)
 
