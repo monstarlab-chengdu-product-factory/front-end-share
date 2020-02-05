@@ -1,0 +1,117 @@
+{
+  "proTypeArr": [
+    {
+      "name": "后端管理系统",
+      "value": [
+        {
+          "name": "公司共通模板",
+          "value": ""
+        },
+        {
+          "name": "dva 默认模板",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "单页面静态",
+      "value": [
+        {
+          "name": "React/next",
+          "value": ""
+        },
+        {
+          "name": "Html",
+          "value": ""
+        },
+        {
+          "name": "Pug",
+          "value": ""
+        },
+        {
+          "name": "React",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "移动端多页面项目",
+      "value": [
+        {
+          "name": "React",
+          "value": ""
+        },
+        {
+          "name": "React/next",
+          "value": ""
+        },
+        {
+          "name": "Pug",
+          "value": ""
+        },
+        {
+          "name": "Preact",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "APP",
+      "value": [
+        {
+          "name": "RN",
+          "value": ""
+        },
+        {
+          "name": "React",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "嵌入式h5页面",
+      "value": [
+        {
+          "name": "React",
+          "value": ""
+        },
+        {
+          "name": "Pug",
+          "value": ""
+        },
+        {
+          "name": "Html",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "个性化C端网站",
+      "value": [
+        {
+          "name": "React/next",
+          "value": ""
+        },
+        {
+          "name": "React",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "小程序",
+      "value": [
+        {
+          "name": "Monstar小程序共通模板",
+          "value": "https://github.com/monstarlab-chengdu-product-factory/monstar-ui.git#master"
+        }
+      ]
+    }
+  ],
+  "textTempArr": [
+    {
+      "name": "README.md",
+      "value": "https://github.com/monstarlab-chengdu-product-factory/front-end-wiki/raw/master/08-template.json"
+    }
+  ]
+}
